@@ -134,8 +134,8 @@ daily_activity %>%
   summary()
 ```
 
-1.  The average steps per day for each user is 7,638. This is lower from the daily 10,000 steps recommended by the Mayo Clinic.
-2.  The difference between the mean and the median for Very Active Minutes and Fairly Active Minutes is higher. This tells us that few users have longer active minutes and most users have shorter active minutes.
+5.1.1.  The average steps per day for each user is 7,638. This is lower from the daily 10,000 steps recommended by the Mayo Clinic.
+5.1.2.  The difference between the mean and the median for Very Active Minutes and Fairly Active Minutes is higher. This tells us that few users have longer active minutes and most users have shorter active minutes.
 
 ```{r}
 intensity %>% 
@@ -151,8 +151,8 @@ daily_sleep %>%
 summary()
 ```
 
-1.  There is at least one sleep record for each day for every user.
-2.  On average, each user is getting 6.98 hours of sleep each night. According to the Mayo Clinic, adults (18 years and above) should be getting 7 or more hours each night. It looks like each user is getting just enough sleep.
+5.1.3.  There is at least one sleep record for each day for every user.
+5.1.4.  On average, each user is getting 6.98 hours of sleep each night. According to the Mayo Clinic, adults (18 years and above) should be getting 7 or more hours each night. It looks like each user is getting just enough sleep.
 
 5.2 Correlations
 
@@ -169,8 +169,8 @@ ggplot(data=daily_sleep, aes(x=TotalMinutesAsleep, y=TotalTimeInBed))+
 
 ![Total Sleep vs Total Time In Bed](images/sleepvstimeinbed.png)
 
-1.  There is a positive correlation between Total Minutes Asleep and Total Time In Bed. Data points are so close together, so we can assume that there is little difference between time just spent in bed and time slept.
-2.  The plot shows data points going upward close to a 45 degree angle. Points are mostly clustered together, telling us that users are sleeping the majority of the time they are in bed.
+5.2.1.  There is a positive correlation between Total Minutes Asleep and Total Time In Bed. Data points are so close together, so we can assume that there is little difference between time just spent in bed and time slept.
+5.2.2.  The plot shows data points going upward close to a 45 degree angle. Points are mostly clustered together, telling us that users are sleeping the majority of the time they are in bed.
 
 ```{r}
 cor(daily_activity[c("TotalSteps", "TotalDistance")])
@@ -185,8 +185,8 @@ ggplot(data=daily_activity, aes(x=TotalSteps, y=TotalDistance))+
 
 ![Total Steps vs Total Distance](images/stepsvsdistance.png)
 
-1.  There is a positive correlation between Total Steps and Total Distance. Data points are so close together, so we can assume that there is little difference between the total number of steps made and the distance each user has gone.
-2.  The plot shows data points going upward close to a 45 degree angle. There is some scattered points as the Total Steps and Total Distance increases. This lets us know that there were a few users that had higher intensities.
+5.2.3.  There is a positive correlation between Total Steps and Total Distance. Data points are so close together, so we can assume that there is little difference between the total number of steps made and the distance each user has gone.
+5.2.4.  The plot shows data points going upward close to a 45 degree angle. There is some scattered points as the Total Steps and Total Distance increases. This lets us know that there were a few users that had higher intensities.
 
 ```{r}
 cor(daily_activity[c("TotalSteps", "Calories")])
@@ -201,7 +201,7 @@ ggplot(data=daily_activity, aes(x=TotalSteps, y=Calories)) +
 
 ![Total Steps vs Calories](images/stepsvscalories.png)
 
-1.  Here it is confirmed that the more steps that are taken the more calories that are burned.
+5.2.5. Here it is confirmed that the more steps that are taken the more calories that are burned.  
 
 6. ACT
 
